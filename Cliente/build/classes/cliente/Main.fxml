@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #363636;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cliente.MainController">
+   <top>
+      <HBox prefHeight="129.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lb_titulo" text="Cliente Offline" textFill="DARKORANGE">
+               <HBox.margin>
+                  <Insets left="20.0" top="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="110.0" prefWidth="336.0">
+               <children>
+                  <JFXTextField fx:id="tf_Servidor" focusColor="DARKORANGE" labelFloat="true" promptText="Servidor" style="-fx-background-color: #898989;" unFocusColor="DARKORANGE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_nick" focusColor="DARKORANGE" labelFloat="true" layoutX="10.0" layoutY="20.0" promptText="Entre com nickname" style="-fx-background-color: #898989;" unFocusColor="DARKORANGE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <JFXButton fx:id="btn_conectar" onMouseClicked="#btn_conectar" prefWidth="150.0" style="-fx-border-color: #00ff00;" text="Conectar" textFill="LIME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="50.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tb_Lista" onMouseClicked="#tv_click" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #474747;">
+              <columns>
+                <TableColumn fx:id="tc_nome" prefWidth="249.0" text="Nickname" />
+              </columns>
+            </TableView>
+            <VBox prefHeight="690.0" prefWidth="550.0">
+               <children>
+                  <JFXTextArea fx:id="ta_historico" disable="true" editable="false" focusColor="WHITE" prefHeight="562.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" unFocusColor="#f5f5f5">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextArea>
+                  <HBox prefHeight="160.0" prefWidth="550.0">
+                     <children>
+                        <JFXTextField fx:id="tf_mensagem" focusColor="DARKORANGE" prefHeight="25.0" prefWidth="415.0" style="-fx-background-color: #9a9a9a;" unFocusColor="#f2f2f2">
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" top="30.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXButton fx:id="btn_enviar" onMouseClicked="#btn_enviar" prefHeight="35.0" prefWidth="92.0" text="Enviar" textFill="DARKORANGE">
+                           <HBox.margin>
+                              <Insets top="23.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

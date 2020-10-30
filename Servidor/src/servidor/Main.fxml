@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #363636;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="servidor.MainController">
+   <top>
+      <HBox prefHeight="84.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lb_titulo" prefHeight="53.0" prefWidth="528.0" text="Servidor Offline" textFill="DARKORANGE">
+               <HBox.margin>
+                  <Insets left="10.0" top="17.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="84.0" prefWidth="182.0">
+               <children>
+                  <JFXButton fx:id="btn_conectar" layoutX="50.0" layoutY="26.0" onMouseClicked="#btn_conectar" prefWidth="150.0" style="-fx-border-color: #00ff00;" text="Conectar" textFill="LIME" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="27.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tb_Conexoes" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #474747;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tc_nome" prefWidth="250.0" text="Nome" />
+          <TableColumn fx:id="tc_IP" prefWidth="250.0" text="IP" />
+            <TableColumn fx:id="tc_Porta" prefWidth="100.0" text="Porta" />
+            <TableColumn fx:id="tc_Status" prefWidth="100.0" text="Status" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

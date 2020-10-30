@@ -1,0 +1,5 @@
+1 -> Connect
+2 -> Accept
+3 -> Disconnect
+4 -> Durante o Accept ocorre o propagar nova conexao
+5 -> Send (Tambem usado pro receve)
